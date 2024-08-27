@@ -1,0 +1,46 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TRINCA.MainPage"
+             BackgroundColor="White">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- Header with the logo and title -->
+            <StackLayout HorizontalOptions="Center" Spacing="10">
+                <!-- Image -->
+                <Image Source="TRINCA_LOGO.png"
+                       HeightRequest="100"
+                       HorizontalOptions="Center"
+                       Margin="0,40,0,40" />
+
+            </StackLayout>
+
+            <!-- Buttons -->
+            <Grid ColumnSpacing="10" RowSpacing="10" HorizontalOptions="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button Text="Login"
+                        Grid.Column="0"
+                        BackgroundColor="Red"
+                        TextColor="White"
+                        CornerRadius="25"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Center" />
+
+                <Button Text="Criar conta"
+                        Grid.Column="1"
+                        BackgroundColor="Red"
+                        TextColor="White"
+                        CornerRadius="25"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Center" />
+            </Grid>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
