@@ -1,46 +1,68 @@
-﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TRINCA.MainPage"
              BackgroundColor="White">
+    <VerticalStackLayout Padding="20"
+                         Spacing="20">
 
-    <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="20">
+        <!--Imagem copo de cerveja -->
+        <Image Source="resource://TRINCA.Resources.Images.cerveja.svg"
+               Aspect="AspectFit"
+               HorizontalOptions="Center"
+               VerticalOptions="Start"
+               HeightRequest="100"/>
+        <!-- Texto na parte superior -->
+        <Label Text="Agenda do churras"
+               FontSize="24"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand"
+               TextColor="Black"
+               Margin="0,0,0,240"/>
 
-            <!-- Header with the logo and title -->
-            <StackLayout HorizontalOptions="Center" Spacing="10">
-                <!-- Image -->
-                <Image Source="TRINCA_LOGO.png"
-                       HeightRequest="100"
-                       HorizontalOptions="Center"
-                       Margin="0,40,0,40" />
+        <!-- Caixa de login -->
+        <Frame CornerRadius="5"
+               HasShadow="False"
+               BackgroundColor="LightGray"
+               Padding="0"
+               Margin="0">
+            <Entry x:Name="UsernameEntry"
+                   Placeholder="Usuário"
+                   TextColor="Black"
+                   BackgroundColor="Transparent"
+                   HeightRequest="45"/>
+        </Frame>
 
-            </StackLayout>
+        <!-- Caixa de senha -->
+        <Frame CornerRadius="5"
+               HasShadow="False"
+               BackgroundColor="LightGray"
+               Padding="0"
+               Margin="0">
+            <Entry x:Name="PasswordEntry"
+                   Placeholder="Senha"
+                   IsPassword="True"
+                   TextColor="Black"
+                   BackgroundColor="Transparent"
+                   HeightRequest="45"/>
+        </Frame>
 
-            <!-- Buttons -->
-            <Grid ColumnSpacing="10" RowSpacing="10" HorizontalOptions="Center">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
+        <!-- Botão de login -->
+        <Button Text="Login"
+                BackgroundColor="Red"
+                TextColor="White"
+                CornerRadius="5"
+                HeightRequest="45"
+                Clicked="OnLoginButtonClicked"/>
 
-                <Button Text="Login"
-                        Grid.Column="0"
-                        BackgroundColor="Red"
-                        TextColor="White"
-                        CornerRadius="25"
-                        HorizontalOptions="FillAndExpand"
-                        VerticalOptions="Center" />
+        <!-- Texto para "esqueceu sua senha" -->
+        <Label Text="Esqueceu sua senha?"
+               HorizontalOptions="Center"
+               TextColor="grey">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnForgotPasswordTapped"/>
+            </Label.GestureRecognizers>
+        </Label>
 
-                <Button Text="Criar conta"
-                        Grid.Column="1"
-                        BackgroundColor="Red"
-                        TextColor="White"
-                        CornerRadius="25"
-                        HorizontalOptions="FillAndExpand"
-                        VerticalOptions="Center" />
-            </Grid>
-
-        </VerticalStackLayout>
-    </ScrollView>
-
+    </VerticalStackLayout>
 </ContentPage>
