@@ -1,10 +1,9 @@
 # Sextou 
 ## Descrição
-### !! Este projeto foi idealizado para portfolio !!
-Para voce que tem aqueles amigos que gostam de sair no final de semana (todo dia é sexta-feira). Nao tera mais problemas com aquele enrolao que sempre perde o dia.
+### !! Este projeto foi idealizado para portfólio !!
+Para você que tem aqueles amigos que gostam de sair no final de semana (todo dia é sexta-feira). Não terá mais problemas com aquele "enrolão" que sempre perde o dia.
 
-
-## Telas Vertical
-| ![Page1](Resources/splash.png)  | ![Page2](Resources/login.png) | ![Page3](Resources/NewEvent.png) | ![Page4](Resources/EventList.png) |
-|:---:|:---:|:---:|:---:|:---:|
+## Telas Verticais
+| ![Page1](Resources/Images/splash.png)  | ![Page2](Resources/Images/login.png) | ![Page3](Resources/Images/NewEvent.png) | ![Page4](Resources/Images/EventLists.png) |
+|:---:|:---:|:---:|:---:|
 | Splash Screen | Tela de Login | Adicionar Eventos  | Lista de Eventos |
